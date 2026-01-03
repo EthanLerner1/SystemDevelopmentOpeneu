@@ -1,5 +1,5 @@
 #pragma once
-#include "status.h"
+#include "../status.h"
 #include <stdint.h>
 #include <stdio.h>
 
@@ -20,3 +20,7 @@ Status file_open(File* file, const char *path, const file_access_t file_access);
 Status file_close(File *file);
 
 Status file_read_line(File *file, char *buf, uint32_t buf_size);
+
+Status file_write_line(File *file, char *buf, uint32_t buf_size);
+
+Status file_write_char(File *file, char c);
